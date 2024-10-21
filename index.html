@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -513,5 +512,61 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 </div>
 </div>
 
-  </body>
+
+
+<div class="wp-block-group alignwide is-layout-flow wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:0">
+<p class="has-contrast-2-color has-text-color has-link-color has-small-font-size wp-elements-fb1dc8a358d6c5ee50b4614eb09d35bb">
+		Designed with <a href="https://wordpress.org" rel="nofollow">WordPress</a>		</p>
+</div>
+</div>
+</footer>
+</div>
+<script src="https://cs272-wordpress.cs.wisc.edu/f24/jlin446/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script src="https://cs272-wordpress.cs.wisc.edu/f24/jlin446/wp-includes/js/admin-bar.min.js?ver=6.6.1" id="admin-bar-js"></script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerHTML = 'Skip to content';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+</script>
+<script id="ss-admin-bar-script-js-extra">
+var ss_admin_status_object = {"ajax_url":"https:\/\/cs272-wordpress.cs.wisc.edu\/f24\/jlin446\/wp-admin\/admin-ajax.php","nonce":"7744e2714d","failed_tests":"0","translations":{"label":"Static Generation:","running":"Running..","idle":"Idle","error":"Error"}};
+</script>
+<script src="https://cs272-wordpress.cs.wisc.edu/f24/jlin446/wp-content/plugins/simply-static/assets/admin-bar.js?ver=1.0" id="ss-admin-bar-script-js"></script>
+</body>
 </html>
